@@ -18,7 +18,6 @@ public class Generating {
     private String name;
     private String packageName;
     private String projectPath;
-    private File fileTemplate;//模板路径
     private String prefix;//模板路径
 
     public Generating(String name, String packageName, String projectPath, String prefix) {
@@ -26,8 +25,6 @@ public class Generating {
         this.packageName = packageName;
         this.projectPath = projectPath;
         this.prefix = prefix;
-        fileTemplate = new File("classpath:/static");//模板路径
-
     }
 
 
