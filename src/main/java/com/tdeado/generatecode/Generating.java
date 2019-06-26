@@ -21,21 +21,15 @@ public class Generating {
     private File fileTemplate;//模板路径
     private String prefix;//模板路径
 
-    public Generating(String name, String packageName, String projectPath,String prefix) {
+    public Generating(String name, String packageName, String projectPath, String prefix) {
         this.name = name;
         this.packageName = packageName;
         this.projectPath = projectPath;
         this.prefix = prefix;
-        fileTemplate = new File(getClass().getClassLoader().getResource("static/Base.ftl").getPath());//模板路径
+        fileTemplate = new File("classpath:/static");//模板路径
 
-        String com_path = Generating.class.getClassLoader().getResource("static").getPath();
-        System.err.println(com_path);
     }
 
-    public static void main(String[] args) {
-        String com_path = Generating.class.getClassLoader().getResource("static/Base.ftl").getPath();
-        System.err.println(com_path);
-    }
 
     public void inits() {
         try {
@@ -76,7 +70,8 @@ public class Generating {
         // 设置默认字体
         configuration.setDefaultEncoding("utf-8");
         // 设置模板路径
-        configuration.setDirectoryForTemplateLoading(fileTemplate);
+        configuration.setClassForTemplateLoading(Generating.class, "/static");
+
         // 获取模板
         Template template = configuration.getTemplate("BaseService.ftl");
         //设置输出文件
@@ -86,14 +81,14 @@ public class Generating {
         //模板输出静态文件
         template.process(object, out);
         //BaseServiceImpl
-        configuration.setDirectoryForTemplateLoading(fileTemplate);
+        configuration.setClassForTemplateLoading(Generating.class, "/static");
         template = configuration.getTemplate("BaseServiceImpl.ftl");
         file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/service/base/impl/Base" + object.get("className").toString() + "ServiceImpl.java");
         out = new FileWriter(file);
         template.process(object, out);
 
         //BaseController
-        configuration.setDirectoryForTemplateLoading(fileTemplate);
+        configuration.setClassForTemplateLoading(Generating.class, "/static");
         template = configuration.getTemplate("BaseController.ftl");
         file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/web/base/Base" + object.get("className").toString() + "Controller.java");
         out = new FileWriter(file);
@@ -110,7 +105,7 @@ public class Generating {
 
 
         //BaseMapper
-        configuration.setDirectoryForTemplateLoading(fileTemplate);
+        configuration.setClassForTemplateLoading(Generating.class, "/static");
         template = configuration.getTemplate("BaseMapper.ftl");
         file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/dao/base/Base" + object.get("className").toString() + "Mapper.java");
         out = new FileWriter(file);
@@ -190,7 +185,7 @@ public class Generating {
         Configuration configuration = new Configuration(Configuration.VERSION_2_3_23);
         // 设置默认字体
         configuration.setDefaultEncoding("utf-8");
-        configuration.setDirectoryForTemplateLoading(fileTemplate);
+        configuration.setClassForTemplateLoading(Generating.class, "/static");
         Template template = null;
         File file = null;
         // 设置模板路径
