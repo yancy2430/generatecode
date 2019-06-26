@@ -7,9 +7,9 @@ import org.apache.maven.plugin.MojoFailureException;
 
 /**
  * 生成DAO代码
- * @goal update-baseentity
+ * @goal init
  */
-public class MainMojo extends AbstractMojo {
+public class InitMojo extends AbstractMojo {
     /**
      * @parameter expression="${basedir}"
      */
@@ -55,10 +55,11 @@ public class MainMojo extends AbstractMojo {
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException {
         DatabaseOperate operate = new DatabaseOperate(host,port,user,pass,dbname);
-        Generating generating = new Generating(artifactId,groupId,basedir,prefix);
+        Generating generating = new Generating(artifactId, groupId, basedir, prefix);
+        generating.inits();
         for (String tableName : operate.getTableNames()) {
             try {
-                generating.createBaseServiceFromModel(tableName,operate,false);
+                generating.createBaseServiceFromModel(tableName,operate,true);
             } catch (Exception e) {
                 e.printStackTrace();
             }

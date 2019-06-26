@@ -26,7 +26,15 @@ public class Generating {
         this.packageName = packageName;
         this.projectPath = projectPath;
         this.prefix = prefix;
-        fileTemplate = new File(projectPath+"/src/main/resources/static/");//模板路径
+        fileTemplate = new File(getClass().getClassLoader().getResource("static/Base.ftl").getPath());//模板路径
+
+        String com_path = Generating.class.getClassLoader().getResource("static").getPath();
+        System.err.println(com_path);
+    }
+
+    public static void main(String[] args) {
+        String com_path = Generating.class.getClassLoader().getResource("static/Base.ftl").getPath();
+        System.err.println(com_path);
     }
 
     public void inits() {
