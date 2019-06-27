@@ -131,18 +131,6 @@ public class Generating {
         //模板输出静态文件
         template.process(object, out);
 
-        if (is) {
-
-            //生成BaseEntity
-            template = configuration.getTemplate("BaseEntity.ftl");
-            //设置输出文件
-            file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/entity/base/Base" + object.get("className").toString() + ".java");
-            //设置输出流
-            out = new FileWriter(file);
-            //模板输出静态文件
-            template.process(object, out);
-
-
             //生成Service
             template = configuration.getTemplate("Service.ftl");
             file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/service/" + object.get("className").toString() + "Service.java");
@@ -175,7 +163,6 @@ public class Generating {
             out = new FileWriter(file);
             //模板输出静态文件
             template.process(object, out);
-        }
 
     }
 
@@ -190,11 +177,6 @@ public class Generating {
         Template template = null;
         File file = null;
         // 设置模板路径
-        //生成Base
-        template = configuration.getTemplate("BaseControllerEmpty.ftl");
-        file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/web/BaseController.java");
-        out = new FileWriter(file);
-        template.process(object, out);
 
         //生成bootstrap
         template = configuration.getTemplate("xml/bootstrap.ftl");
@@ -216,18 +198,28 @@ public class Generating {
     }
 
     public File createNewFileName(String strPath) {
-        System.err.println(projectPath + "/" + strPath);
+
         File file = new File(projectPath + "/" + strPath);
         File fileParent = file.getParentFile();
-        if (!fileParent.exists()) {
+        if (strPath.contains("base") && !strPath.contains("MapperXmlEmpty")) {
+            try {
+                if (!fileParent.exists()){
+                    fileParent.mkdirs();
+                }
+                file.createNewFile();
+                return file;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
             fileParent.mkdirs();
-        }
+            try {
+                file.createNewFile();
+                return file;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-        try {
-            file.createNewFile();
-            return file;
-        } catch (IOException e) {
-            e.printStackTrace();
         }
         return file;
     }
