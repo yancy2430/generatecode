@@ -35,6 +35,7 @@ public class Generating {
         try {
             Map<String, Object> root = new HashMap<String, Object>();
             root.put("name", name);
+            root.put("AppName", capitalized(name));
             root.put("packageName", packageName + "." + name);
             root.put("basePackageName", packageName);
             root.put("timeStamp", String.valueOf(System.currentTimeMillis()));
@@ -194,11 +195,6 @@ public class Generating {
         file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/web/BaseController.java");
         out = new FileWriter(file);
         template.process(object, out);
-        //生成application
-        template = configuration.getTemplate("xml/application.ftl");
-        file = createNewFileName("src/main/resources/application.properties");
-        out = new FileWriter(file);
-        template.process(object, out);
 
         //生成bootstrap
         template = configuration.getTemplate("xml/bootstrap.ftl");
@@ -207,50 +203,16 @@ public class Generating {
         template.process(object, out);
 
         //生成pom.xml
-        template = configuration.getTemplate("xml/pom2.ftl");
-        file = createNewFileName("pom2.xml");
+//        template = configuration.getTemplate("xml/pom2.ftl");
+//        file = createNewFileName("pom2.xml");
+//        out = new FileWriter(file);
+//        template.process(object, out);
+
+        //生成Application.ftl
+        template = configuration.getTemplate("Application.ftl");
+        file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/" + object.get("AppName") + "Application.java");
         out = new FileWriter(file);
         template.process(object, out);
-
-
-        //生成Dockerfile
-        template = configuration.getTemplate("docker/Dockerfile.ftl");
-        file = createNewFileName("src/main/docker/Dockerfile");
-        out = new FileWriter(file);
-        template.process(object, out);
-        System.err.println(fileTemplate.getPath());
-        getNew(fileTemplate.getPath() + "/category", configuration, object);
-    }
-
-    private void getNew(String path, Configuration configuration, Map<String, Object> object) throws IOException, TemplateException {
-        File file = new File(path);
-        //得到文件夹下的所有文件和文件夹
-        String[] list = file.list();
-        if (list != null && list.length > 0) {
-            for (String oldName : list) {
-                File oldFile = new File(path, oldName);
-                //判断出文件和文件夹
-                Template template;
-                if (!oldFile.isDirectory()) {
-                    //文件则判断是不是要修改的
-                    if (oldName.contains(".ftl")) {
-                        System.err.println(oldFile.getPath().split("category")[1]);
-                        //生成xml
-                        template = configuration.getTemplate("category" + oldFile.getPath().split("category")[1]);
-//                        //设置输出文件
-                        file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + oldFile.getPath().split("category")[1].replace("ftl", "java"));
-//                        //设置输出流
-                        FileWriter out = new FileWriter(file);
-//                        //模板输出静态文件
-                        template.process(object, out);
-                    }
-                } else {
-                    //文件夹则迭代
-                    String newpath = path + "/" + oldName;
-                    getNew(newpath, configuration, object);
-                }
-            }
-        }
     }
 
     public File createNewFileName(String strPath) {

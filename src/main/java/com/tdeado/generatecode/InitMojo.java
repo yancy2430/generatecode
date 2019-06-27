@@ -54,8 +54,8 @@ public class InitMojo extends AbstractMojo {
 
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException {
-        DatabaseOperate operate = new DatabaseOperate(host,port,user,pass,dbname);
         Generating generating = new Generating(artifactId, groupId, basedir, prefix);
+        DatabaseOperate operate = new DatabaseOperate(host,port,user,pass,dbname);
         generating.inits();
         for (String tableName : operate.getTableNames()) {
             try {
