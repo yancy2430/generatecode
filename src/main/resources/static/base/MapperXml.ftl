@@ -3,12 +3,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="${packageName}.dao.base.Base${className}Mapper">
 
-    <#include "mysql/insertXML.ftl">
+    <#include "../mysql/insertXML.ftl">
 
-    <#include "mysql/updateXML.ftl">
+    <#include "../mysql/updateXML.ftl">
 
-    <#include "mysql/selectXML.ftl">
+    <#include "../mysql/selectXML.ftl">
 
-    <#include "mysql/deleteXML.ftl">
+    <#include "../mysql/deleteXML.ftl">
 
 </mapper>

@@ -64,6 +64,8 @@ public class Generating {
         object.put("tableName", tableName);
         object.put("timeStamp", String.valueOf(System.currentTimeMillis()));
         object.put("sense", "`");
+
+
         System.err.println(GsonUtil.beanTojson(operate.getTableData(tableName).getColumns()));
         FileWriter out = null;
         // 通过FreeMarker的Confuguration读取相应的模板文件
@@ -74,95 +76,61 @@ public class Generating {
         configuration.setClassForTemplateLoading(Generating.class, "/static");
 
         // 获取模板
-        Template template = configuration.getTemplate("BaseService.ftl");
+        Template template = configuration.getTemplate("base/BaseService.ftl");
         //设置输出文件
-        File file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/service/base/Base" + object.get("className").toString() + "Service.java");
-        //设置输出流
-        out = new FileWriter(file);
-        //模板输出静态文件
-        template.process(object, out);
+        createNewFileNameExist("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/service/base/Base" + object.get("className").toString() + "Service.java",out,object,template);
+
         //BaseServiceImpl
         configuration.setClassForTemplateLoading(Generating.class, "/static");
-        template = configuration.getTemplate("BaseServiceImpl.ftl");
-        file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/service/base/impl/Base" + object.get("className").toString() + "ServiceImpl.java");
-        out = new FileWriter(file);
-        template.process(object, out);
+        template = configuration.getTemplate("base/BaseServiceImpl.ftl");
+        createNewFileNameExist("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/service/base/impl/Base" + object.get("className").toString() + "ServiceImpl.java",out,object,template);
 
         //BaseController
         configuration.setClassForTemplateLoading(Generating.class, "/static");
-        template = configuration.getTemplate("BaseController.ftl");
-        file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/web/base/Base" + object.get("className").toString() + "Controller.java");
-        out = new FileWriter(file);
-        template.process(object, out);
+        template = configuration.getTemplate("base/BaseController.ftl");
+        createNewFileNameExist("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/web/base/Base" + object.get("className").toString() + "Controller.java",out,object,template);
 
         //生成entity
-        template = configuration.getTemplate("entity.ftl");
+        template = configuration.getTemplate("base/entity.ftl");
         //设置输出文件
-        file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/entity/" + object.get("className").toString() + ".java");
-        //设置输出流
-        out = new FileWriter(file);
-        //模板输出静态文件
-        template.process(object, out);
+        createNewFileNameExist("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/entity/" + object.get("className").toString() + ".java",out,object,template);
 
 
         //BaseMapper
         configuration.setClassForTemplateLoading(Generating.class, "/static");
-        template = configuration.getTemplate("BaseMapper.ftl");
-        file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/dao/base/Base" + object.get("className").toString() + "Mapper.java");
-        out = new FileWriter(file);
-        template.process(object, out);
+        template = configuration.getTemplate("base/BaseMapper.ftl");
+        createNewFileNameExist("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/dao/base/Base" + object.get("className").toString() + "Mapper.java",out,object,template);
 
         //生成BaseMapper xml
-        template = configuration.getTemplate("MapperXml.ftl");
+        template = configuration.getTemplate("base/MapperXml.ftl");
         //设置输出文件
-        file = createNewFileName("src/main/resources/mapper/base/Base" + object.get("className").toString() + "Mapper.xml");
-        //设置输出流
-        out = new FileWriter(file);
-        //模板输出静态文件
-        template.process(object, out);
+        createNewFileNameExist("src/main/resources/mapper/base/Base" + object.get("className").toString() + "Mapper.xml",out,object,template);
 
 
         //生成doc
         template = configuration.getTemplate("doc/md.ftl");
         //设置输出文件
-        file = createNewFileName("src/main/resources/doc/" + object.get("className").toString() + ".md");
-        //设置输出流
-        out = new FileWriter(file);
-        //模板输出静态文件
-        template.process(object, out);
+        createNewFileName("src/main/resources/doc/" + object.get("className").toString() + ".md",out,object,template);
 
-            //生成Service
-            template = configuration.getTemplate("Service.ftl");
-            file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/service/" + object.get("className").toString() + "Service.java");
-            out = new FileWriter(file);
-            template.process(object, out);
+        //生成Service
+        template = configuration.getTemplate("Service.ftl");
+        createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/service/" + object.get("className").toString() + "Service.java",out,object,template);
 
-            //ServiceImpl
-            template = configuration.getTemplate("ServiceImpl.ftl");
-            file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/service/impl/" + object.get("className").toString() + "ServiceImpl.java");
-            out = new FileWriter(file);
-            template.process(object, out);
-            //Controller
-            template = configuration.getTemplate("Controller.ftl");
-            file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/web/" + object.get("className").toString() + "Controller.java");
-            out = new FileWriter(file);
-            template.process(object, out);
+        //ServiceImpl
+        template = configuration.getTemplate("ServiceImpl.ftl");
+        createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/service/impl/" + object.get("className").toString() + "ServiceImpl.java",out,object,template);
+        //Controller
+        template = configuration.getTemplate("Controller.ftl");
+        createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/web/" + object.get("className").toString() + "Controller.java",out,object,template);
 
-            //Mapper
-            template = configuration.getTemplate("Mapper.ftl");
-            file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/dao/" + object.get("className").toString() + "Mapper.java");
-            out = new FileWriter(file);
-            template.process(object, out);
+        //Mapper
+        template = configuration.getTemplate("Mapper.ftl");
+        createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/dao/" + object.get("className").toString() + "Mapper.java",out,object,template);
 
-
-            //生成xml
-            template = configuration.getTemplate("MapperXmlEmpty.ftl");
-            //设置输出文件
-            file = createNewFileName("src/main/resources/mapper/" + object.get("className").toString() + "Mapper.xml");
-            //设置输出流
-            out = new FileWriter(file);
-            //模板输出静态文件
-            template.process(object, out);
+        //生成xml
+        template = configuration.getTemplate("MapperXmlEmpty.ftl");
+        //设置输出文件
+        createNewFileName("src/main/resources/mapper/" + object.get("className").toString() + "Mapper.xml",out,object,template);
 
     }
 
@@ -180,46 +148,41 @@ public class Generating {
 
         //生成bootstrap
         template = configuration.getTemplate("xml/bootstrap.ftl");
-        file = createNewFileName("src/main/resources/bootstrap.properties");
-        out = new FileWriter(file);
-        template.process(object, out);
-
-        //生成pom.xml
-//        template = configuration.getTemplate("xml/pom2.ftl");
-//        file = createNewFileName("pom2.xml");
-//        out = new FileWriter(file);
-//        template.process(object, out);
+        file = createNewFileName("src/main/resources/bootstrap.properties",out,object,template);
 
         //生成Application.ftl
         template = configuration.getTemplate("Application.ftl");
-        file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/" + object.get("AppName") + "Application.java");
-        out = new FileWriter(file);
-        template.process(object, out);
+        file = createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/" + object.get("AppName") + "Application.java",out,object,template);
     }
 
-    public File createNewFileName(String strPath) {
+    public File createNewFileName(String strPath,FileWriter out,Map<String, Object> object,Template template) throws IOException, TemplateException {
 
         File file = new File(projectPath + "/" + strPath);
         File fileParent = file.getParentFile();
-        if (strPath.contains("base") && !strPath.contains("MapperXmlEmpty")) {
-            try {
-                if (!fileParent.exists()){
-                    fileParent.mkdirs();
-                }
-                file.createNewFile();
-                return file;
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-            fileParent.mkdirs();
-            try {
-                file.createNewFile();
-                return file;
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        System.err.println("createNewFileName:"+file.getPath()+":"+file.exists());
+        if (file.exists()){
+            return file;
+        }
+        return getFile(file, fileParent,out,object,template);
+    }
 
+    public File createNewFileNameExist(String strPath,FileWriter out,Map<String, Object> object,Template template) throws IOException, TemplateException {
+        File file = new File(projectPath + "/" + strPath);
+        File fileParent = file.getParentFile();
+        System.err.println("createNewFileNameExist:"+file.getPath()+":"+file.exists());
+        return getFile(file, fileParent,out,object,template);
+    }
+    private File getFile(File file, File fileParent,FileWriter out,Map<String, Object> object,Template template) throws IOException, TemplateException {
+        try {
+            if (!fileParent.exists()) {
+                fileParent.mkdirs();
+            }
+            file.createNewFile();
+            out = new FileWriter(file);
+            //模板输出静态文件
+            template.process(object, out);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return file;
     }

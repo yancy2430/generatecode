@@ -23,7 +23,7 @@
             <plugin>
                 <groupId>com.tdeado</groupId>
                 <artifactId>generate-code</artifactId>
-                <version>2.5</version>
+                <version>3.0</version>
                 <configuration>
                     <host>mysqlhost</host>
                     <port>mysqlprot</port>

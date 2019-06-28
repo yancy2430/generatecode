@@ -3,7 +3,6 @@ package ${packageName}.web.base;
 import com.github.pagehelper.PageInfo;
 import ${packageName}.entity.${className};
 import ${packageName}.service.${className}Service;
-import ${packageName}.web.BaseController;
 import com.tdeado.utils.bean.Result;
 import com.tdeado.utils.reflect.ParamUtil;
 import com.tdeado.utils.string.StringUtil;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Map;
 
-public class Base${className}Controller extends BaseController {
+public class Base${className}Controller{
 
     @Autowired
     protected ${className}Service service;
