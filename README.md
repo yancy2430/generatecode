@@ -1,0 +1,1 @@
+##根据MySQL生成 dao等代码的maven插件
