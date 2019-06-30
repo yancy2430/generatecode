@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="123c619d-1b4c-4fdc-93ec-dc1d520e98f8" name="Default Changelist" comment="添加生成实体类 并发送到实体模块">
+    <list default="true" id="123c619d-1b4c-4fdc-93ec-dc1d520e98f8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/UploadEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/UploadEntity.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/UploadEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1239">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="214">
+              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
+            <state relative-caret-position="1113">
               <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
             </state>
           </provider>
@@ -110,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="61" selection-end-column="29" />
+            <state relative-caret-position="390">
+              <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,6 +150,7 @@
       <find>createNewFileNameExist</find>
       <find>${basePackageName}.entity.${name}</find>
       <find>${packageName}.entity.${className}</find>
+      <find>clone</find>
     </findStrings>
     <replaceStrings>
       <replace>configuration.setClassForTemplateLoading(Generating.class, &quot;/static&quot;);</replace>
@@ -181,9 +182,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/base/entity.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/FileUtils.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/base/BaseService.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/UploadEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
@@ -215,6 +216,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -253,7 +255,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -345,7 +346,8 @@
       <workItem from="1561794972182" duration="2328000" />
       <workItem from="1561873655696" duration="4461000" />
       <workItem from="1561885326627" duration="1665000" />
-      <workItem from="1561887546306" duration="112000" />
+      <workItem from="1561887546306" duration="159000" />
+      <workItem from="1561887988481" duration="121000" />
     </task>
     <task id="LOCAL-00001" summary="完善插件">
       <created>1561563750125</created>
@@ -431,11 +433,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561886982074</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="添加生成实体类 并发送到实体模块">
+      <created>1561887671852</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1561887671852</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34471000" />
+    <option name="totallyTimeSpent" value="34639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1525" height="986" extended-state="0" />
@@ -661,16 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/UploadEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1239">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseServiceImpl.ftl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -678,6 +677,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1113">
+          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -705,20 +711,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/UploadEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="61" selection-end-column="29" />
+        <state relative-caret-position="214">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+        <state relative-caret-position="390">
+          <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

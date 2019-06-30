@@ -73,6 +73,8 @@ public class MainMojo extends AbstractMojo {
             }
         }
 
+        UploadEntity.clone(entityurl+"/clone");
+
         ArrayList<Object> list = FileUtils.scanFilesWithNoRecursion(basedir+"/src/main/java/"+groupId.replace(".","/")+"/"+artifactId+"/entity/");
         for (Object o : list) {
             System.err.println(o);
@@ -80,6 +82,7 @@ public class MainMojo extends AbstractMojo {
             FileUtils.delFile(o.toString());
         }
         FileUtils.delFile(basedir+"/src/main/java/"+groupId.replace(".","/")+"/"+artifactId+"/entity");
+
         UploadEntity.deploy(entityurl+"/deploy?v="+UploadEntity.push(entityurl+"/push"));
     }
 

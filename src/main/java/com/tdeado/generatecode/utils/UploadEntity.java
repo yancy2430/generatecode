@@ -13,7 +13,17 @@ public class UploadEntity {
             .readTimeout(3600, TimeUnit.SECONDS)
             .writeTimeout(3600, TimeUnit.SECONDS)
             .build();
+    public static String clone(String cloneUrl) {
+        try {
+            return okHttpClient.newCall(new Request.Builder()
+                    .get()
+                    .url(cloneUrl)
+                    .build()).execute().body().string();
 
+        } catch (IOException e) {
+        }
+        return "error";
+    }
     public static void upload(File file,String module,String uploadUrl) {
         try {
             // MultipartBuilder，是上传文件的query
