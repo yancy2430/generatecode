@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="123c619d-1b4c-4fdc-93ec-dc1d520e98f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/EntityMojo.java" afterDir="false" />
+    <list default="true" id="123c619d-1b4c-4fdc-93ec-dc1d520e98f8" name="Default Changelist" comment="添加说明">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/UploadEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/EntityMojo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/base/BaseController.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/base/BaseController.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/base/BaseMapper.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/base/BaseMapper.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/base/BaseService.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/base/BaseService.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/base/BaseServiceImpl.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/base/BaseServiceImpl.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/base/entity.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/base/entity.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/mysql/selectXML.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/mysql/selectXML.ftl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,19 +43,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseController.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/Generating.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="18" column="30" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="30" />
+            <state relative-caret-position="355">
+              <caret line="36" column="26" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="26" />
               <folding>
                 <element signature="method#readToString#0;class#Generating#0" />
               </folding>
@@ -54,45 +55,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="525">
-                <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/xml/pom2.ftl">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/xml/bootstrap.ftl">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/UploadEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="23" column="29" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="29" />
+            <state relative-caret-position="416">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,11 +66,43 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/EntityMojo.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseServiceImpl.ftl">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseService.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="56" column="7" selection-start-line="56" selection-start-column="7" selection-end-line="64" selection-end-column="9" />
+            <state relative-caret-position="273">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/MapperXml.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/mysql/selectXML.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="67" selection-start-column="21" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -112,15 +110,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            <state relative-caret-position="2226">
+              <caret line="106" column="29" selection-start-line="99" selection-start-column="19" selection-end-line="106" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/Mapper.ftl">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/FileUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1197">
+              <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -140,9 +157,13 @@
       <find>createNewFileName</find>
       <find>file =</find>
       <find>createNewFileNameExist</find>
+      <find>${basePackageName}.entity.${name}</find>
+      <find>${packageName}.entity.${className}</find>
     </findStrings>
     <replaceStrings>
       <replace>configuration.setClassForTemplateLoading(Generating.class, &quot;/static&quot;);</replace>
+      <replace>${basePackageName}.entity.${name}</replace>
+      <replace>${basePackageName}.entity.${name}.${className}</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -155,7 +176,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/database/KV.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/database/DatabaseOperate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/AddMojo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/BaseEntity.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java" />
@@ -164,11 +184,16 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/base/MapperXml.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/static/base/BaseController.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitProject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/Generating.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/resources/static/xml/bootstrap.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/EntityMojo.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/Generating.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/base/entity.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/FileUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/base/BaseService.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/UploadEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java" />
       </list>
     </option>
   </component>
@@ -194,7 +219,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="395" />
+    <option name="x" value="216" />
     <option name="y" value="23" />
     <option name="width" value="1525" />
     <option name="height" value="986" />
@@ -205,6 +230,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -239,32 +265,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="generatecode" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="generatecode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="generatecode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="generatecode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="generatecode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561802615070" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561886964729" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -298,6 +308,40 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Application.MainMojo">
+    <configuration name="EntityMojo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tdeado.generatecode.EntityMojo" />
+      <module name="generate-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tdeado.generatecode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainMojo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tdeado.generatecode.MainMojo" />
+      <module name="generate-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tdeado.generatecode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainMojo" />
+        <item itemvalue="Application.EntityMojo" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -313,7 +357,9 @@
       <workItem from="1561606735259" duration="2844000" />
       <workItem from="1561617721073" duration="4903000" />
       <workItem from="1561775687509" duration="6000" />
-      <workItem from="1561794972182" duration="2316000" />
+      <workItem from="1561794972182" duration="2328000" />
+      <workItem from="1561873655696" duration="4461000" />
+      <workItem from="1561885326627" duration="1625000" />
     </task>
     <task id="LOCAL-00001" summary="完善插件">
       <created>1561563750125</created>
@@ -385,14 +431,22 @@
       <option name="project" value="LOCAL" />
       <updated>1561693467638</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="添加说明">
+      <created>1561802622622</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1561802622622</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28221000" />
+    <option name="totallyTimeSpent" value="34319000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="395" y="23" width="1525" height="986" extended-state="0" />
+    <frame x="216" y="23" width="1525" height="986" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2363268" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -404,7 +458,7 @@
       <window_info id="Alibaba Cloud Explorer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32996634" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32885906" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -420,7 +474,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.28224173" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.28224173" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="CDI" order="6" />
@@ -496,13 +550,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/Base.ftl" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/xml/application.ftl" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/AddMojo.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/StrUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="183" column="36" selection-start-line="183" selection-start-column="25" selection-end-line="183" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/BaseControllerEmpty.ftl" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/BaseEntity.ftl" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/ServiceImpl.ftl">
@@ -527,22 +574,6 @@
           <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/MapperXml.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/entity.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseServiceImpl.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseService.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/Business.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitProject.java" />
@@ -576,47 +607,131 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/Mapper.ftl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/Generating.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.14.0/okhttp-3.14.0-sources.jar!/okhttp3/MultipartBody.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="30" />
+        <state relative-caret-position="394">
+          <caret line="325" column="64" selection-start-line="325" selection-start-column="58" selection-end-line="325" selection-end-column="64" />
           <folding>
-            <element signature="method#readToString#0;class#Generating#0" />
+            <element signature="e#10246#10247#0" expanded="true" />
+            <element signature="e#10308#10309#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.14.0/okhttp-3.14.0-sources.jar!/okhttp3/MediaType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="478">
+          <caret line="112" column="44" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.14.0/okhttp-3.14.0-sources.jar!/okhttp3/RequestBody.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="29" />
+        <state relative-caret-position="407">
+          <caret line="156" column="28" selection-start-line="156" selection-start-column="28" selection-end-line="156" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/plugin.jar!/sun/plugin/javascript/navig/JSType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/EntityMojo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/StrUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="183" column="36" selection-start-line="183" selection-start-column="25" selection-end-line="183" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/entity.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="8" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseServiceImpl.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseService.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/MapperXml.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/mysql/selectXML.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="67" selection-start-column="21" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/EntityMojo.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="56" column="7" selection-start-line="56" selection-start-column="7" selection-end-line="64" selection-end-column="9" />
+        <state relative-caret-position="2226">
+          <caret line="106" column="29" selection-start-line="99" selection-start-column="19" selection-end-line="106" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/Generating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="26" />
+          <folding>
+            <element signature="method#readToString#0;class#Generating#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/UploadEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

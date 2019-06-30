@@ -1,7 +1,7 @@
 package ${packageName}.web.base;
 
 import com.github.pagehelper.PageInfo;
-import ${packageName}.entity.${className};
+import ${basePackageName}.entity.${name}.${className};
 import ${packageName}.service.${className}Service;
 import com.tdeado.utils.bean.Result;
 import com.tdeado.utils.reflect.ParamUtil;

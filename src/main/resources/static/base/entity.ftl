@@ -1,4 +1,4 @@
-package ${packageName}.entity;
+package ${basePackageName}.entity.${name};
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import java.io.Serializable;

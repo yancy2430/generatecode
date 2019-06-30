@@ -1,7 +1,7 @@
 package ${packageName}.dao.base;
 
 import java.util.List;
-import ${packageName}.entity.${className};
+import ${basePackageName}.entity.${name}.${className};
 
 /**
 *  @author author

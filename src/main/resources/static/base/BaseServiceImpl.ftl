@@ -3,7 +3,7 @@ package ${packageName}.service.base.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import ${packageName}.dao.${className}Mapper;
-import ${packageName}.entity.${className};
+import ${basePackageName}.entity.${name}.${className};
 import ${packageName}.service.${className}Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
