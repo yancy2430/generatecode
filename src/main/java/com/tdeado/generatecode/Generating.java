@@ -96,6 +96,12 @@ public class Generating {
         createNewFileNameExist("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/entity/" + object.get("className").toString() + ".java",out,object,template);
 
 
+        //生成entity
+        template = configuration.getTemplate("base/BaseRemoteService.ftl");
+        //设置输出文件
+        createNewFileNameExist("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/remote/base/" + object.get("className").toString() + "RemoteFeginService.java",out,object,template);
+
+
         //BaseMapper
         configuration.setClassForTemplateLoading(Generating.class, "/static");
         template = configuration.getTemplate("base/BaseMapper.ftl");

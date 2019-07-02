@@ -12,18 +12,20 @@ public abstract class Base${className}ServiceImpl implements ${className}Service
     @Autowired
     protected ${className}Mapper mapper;
     @Override
-    public ${className} add${className}(${className} obj) {
+    public boolean add${className}(${className} obj) {
         if (mapper.insert${className}(obj)>0){
-            return obj;
+            return true;
+        }else{
+            return false;
         }
-        throw new RuntimeException("${className}数据库添加失败");
     }
     @Override
-    public ${className} edit${className}(${className} obj) {
+    public boolean edit${className}(${className} obj) {
         if (mapper.update${className}(obj)>0){
-            return obj;
+            return true;
+        }else{
+            return false;
         }
-        throw new RuntimeException("${className}数据库修改失败");
     }
     @Override
     public ${className} get${className}(${className} obj) {
