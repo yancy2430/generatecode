@@ -1,7 +1,7 @@
 package ${basePackageName}.remotecall.${name};
 
 
-import ${basePackageName}.entity.${name}.${className};
+import ${basePackageName}.${name}.entity.${className};
 import com.github.pagehelper.PageInfo;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

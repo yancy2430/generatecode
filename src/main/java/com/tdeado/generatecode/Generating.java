@@ -88,7 +88,7 @@ public class Generating {
         //BaseController
         configuration.setClassForTemplateLoading(Generating.class, "/static");
         template = configuration.getTemplate("base/BaseController.ftl");
-        createNewFileNameExist("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/web/base/Base" + object.get("className").toString() + "Controller.java",out,object,template);
+        createNewFileNameExist("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/web/" + object.get("className").toString() + "Controller.java",out,object,template);
 
         //生成entity
         template = configuration.getTemplate("base/entity.ftl");
@@ -125,9 +125,6 @@ public class Generating {
         //ServiceImpl
         template = configuration.getTemplate("ServiceImpl.ftl");
         createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/service/impl/" + object.get("className").toString() + "ServiceImpl.java",out,object,template);
-        //Controller
-        template = configuration.getTemplate("Controller.ftl");
-        createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/web/" + object.get("className").toString() + "Controller.java",out,object,template);
 
         //Mapper
         template = configuration.getTemplate("Mapper.ftl");

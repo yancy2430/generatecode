@@ -51,10 +51,6 @@ public class InitMojo extends AbstractMojo {
      * @parameter expression="${pass}"
      */
     private String pass;
-    /**
-     * @parameter expression="${entityurl}"
-     */
-    private String entityurl;
 
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException {

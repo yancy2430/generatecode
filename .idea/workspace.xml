@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="123c619d-1b4c-4fdc-93ec-dc1d520e98f8" name="Default Changelist" comment="修复没有拉取">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/RemoteMojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/base/BaseRemoteService.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/Generating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/Generating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/RemoteMojo.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/base/BaseController.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/base/BaseController.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/base/BaseMapper.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/base/BaseMapper.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/base/BaseRemoteService.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/base/BaseRemoteService.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/base/BaseService.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/base/BaseService.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/base/BaseServiceImpl.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/base/BaseServiceImpl.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/mysql/deleteXML.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/mysql/deleteXML.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/base/entity.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/base/entity.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/mysql/selectXML.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/mysql/selectXML.ftl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/Generating.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="101" column="114" selection-start-line="101" selection-start-column="114" selection-end-line="101" selection-end-column="114" />
+            <state relative-caret-position="168">
+              <caret line="89" column="65" selection-start-line="89" selection-start-column="51" selection-end-line="89" selection-end-column="65" />
               <folding>
                 <element signature="method#readToString#0;class#Generating#0" />
               </folding>
@@ -54,35 +59,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/MapperXml.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+            <state relative-caret-position="189">
+              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/mysql/selectXML.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+            <state relative-caret-position="84">
+              <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/mysql/updateXML.ftl">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseController.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="20" selection-end-column="15" />
+            <state relative-caret-position="42">
+              <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="3" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseMapper.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-44">
-              <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+            <state relative-caret-position="386">
+              <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,28 +105,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/RemoteMojo.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/entity.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="879">
-              <caret line="80" selection-start-line="80" selection-end-line="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/mysql/deleteXML.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="84">
+              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -120,8 +116,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseService.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="54" selection-start-line="1" selection-end-line="2" selection-end-column="54" />
+            <state relative-caret-position="252">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseServiceImpl.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -129,8 +134,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseRemoteService.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+            <state relative-caret-position="63">
+              <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -155,11 +160,15 @@
       <find>${basePackageName}.entity.${name}</find>
       <find>${packageName}.entity.${className}</find>
       <find>clone</find>
+      <find>web</find>
+      <find>${basePackageName}.entity.${name}.${className}</find>
+      <find>BaseController</find>
     </findStrings>
     <replaceStrings>
       <replace>configuration.setClassForTemplateLoading(Generating.class, &quot;/static&quot;);</replace>
       <replace>${basePackageName}.entity.${name}</replace>
       <replace>${basePackageName}.entity.${name}.${className}</replace>
+      <replace>${basePackageName}.${name}.entity.${className}</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -181,20 +190,21 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/resources/static/xml/bootstrap.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/EntityMojo.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/base/entity.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/FileUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/UploadEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/base/BaseServiceImpl.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/base/BaseController.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/base/BaseMapper.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/static/mysql/deleteXML.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/base/BaseService.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/RemoteMojo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/base/entity.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/Generating.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/base/BaseController.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/base/BaseMapper.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/static/base/BaseRemoteService.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/mysql/selectXML.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/base/BaseService.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/base/BaseServiceImpl.ftl" />
       </list>
     </option>
   </component>
@@ -218,7 +228,7 @@
     <option name="x" value="166" />
     <option name="y" value="23" />
     <option name="width" value="1688" />
-    <option name="height" value="986" />
+    <option name="height" value="977" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -283,24 +293,24 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="generatecode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="generatecode" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562033804541" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -389,6 +399,7 @@
       <workItem from="1561887546306" duration="159000" />
       <workItem from="1561887988481" duration="739000" />
       <workItem from="1561950761863" duration="8311000" />
+      <workItem from="1563028151981" duration="3618000" />
     </task>
     <task id="LOCAL-00001" summary="完善插件">
       <created>1561563750125</created>
@@ -492,12 +503,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43568000" />
+    <option name="totallyTimeSpent" value="47186000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="166" y="23" width="1688" height="986" extended-state="0" />
+    <frame x="166" y="23" width="1688" height="977" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21289538" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21506684" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -506,14 +518,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Alibaba Cloud Explorer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32996634" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3299435" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32881355" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32997763" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -523,7 +535,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.25425792" />
+      <window_info active="true" anchor="right" id="Maven" order="3" visible="true" weight="0.25334144" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="CDI" order="6" />
@@ -641,38 +653,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/Mapper.ftl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.14.0/okhttp-3.14.0-sources.jar!/okhttp3/MultipartBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="325" column="64" selection-start-line="325" selection-start-column="58" selection-end-line="325" selection-end-column="64" />
-          <folding>
-            <element signature="e#10246#10247#0" expanded="true" />
-            <element signature="e#10308#10309#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.14.0/okhttp-3.14.0-sources.jar!/okhttp3/MediaType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="112" column="44" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.14.0/okhttp-3.14.0-sources.jar!/okhttp3/RequestBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="156" column="28" selection-start-line="156" selection-start-column="28" selection-end-line="156" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/plugin.jar!/sun/plugin/javascript/navig/JSType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.14.0/okhttp-3.14.0-sources.jar!/okhttp3/MultipartBody.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.14.0/okhttp-3.14.0-sources.jar!/okhttp3/MediaType.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.14.0/okhttp-3.14.0-sources.jar!/okhttp3/RequestBody.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/plugin.jar!/sun/plugin/javascript/navig/JSType.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/EntityMojo.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/utils/StrUtils.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -701,48 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseController.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1127">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseMapper.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="20" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/mysql/selectXML.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="67" selection-start-column="21" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseServiceImpl.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/entity.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-610">
-          <caret column="41" selection-start-column="8" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/MapperXml.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/mysql/updateXML.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -757,24 +699,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/RemoteMojo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+        <state relative-caret-position="782">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/InitMojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseController.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="3" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseMapper.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseRemoteService.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/entity.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/MapperXml.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/mysql/selectXML.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/Generating.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="101" column="114" selection-start-line="101" selection-start-column="114" selection-end-line="101" selection-end-column="114" />
+        <state relative-caret-position="168">
+          <caret line="89" column="65" selection-start-line="89" selection-start-column="51" selection-end-line="89" selection-end-column="65" />
           <folding>
             <element signature="method#readToString#0;class#Generating#0" />
           </folding>
@@ -783,32 +784,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseService.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="54" selection-start-line="1" selection-end-line="2" selection-end-column="54" />
+        <state relative-caret-position="252">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseRemoteService.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/base/BaseServiceImpl.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/RemoteMojo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="879">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tdeado/generatecode/MainMojo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
-          <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
         </state>
       </provider>
     </entry>

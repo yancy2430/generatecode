@@ -1,6 +1,8 @@
-package ${basePackageName}.entity.${name};
+package ${basePackageName}.${name}.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.tdeado.utils.encrypt.Md5Util;
+import com.tdeado.utils.json.GsonUtil;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -46,6 +48,10 @@ public class ${className} implements Serializable{
                 "${attr.propertiesName}='" + ${attr.propertiesName} + '\'' +
 </#list>
             '}';
+    }
+
+    public String hash() {
+        return Md5Util.getMD5(GsonUtil.beanTojson(this));
     }
 
     public static Builder Build(){return new Builder();}

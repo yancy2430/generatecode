@@ -1,7 +1,7 @@
-package ${packageName}.web.base;
+package ${packageName}.web;
 
 import com.github.pagehelper.PageInfo;
-import ${basePackageName}.entity.${name}.${className};
+import ${basePackageName}.${name}.entity.${className};
 import ${packageName}.service.${className}Service;
 import com.tdeado.utils.reflect.ParamUtil;
 import com.tdeado.utils.string.StringUtil;
@@ -13,23 +13,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Map;
 
-public class Base${className}Controller{
+public class ${className}Controller{
 
     @Autowired
     protected ${className}Service service;
 
     @RequestMapping(value = "add",name="添加", method = {RequestMethod.POST})
-    protected boolean add(@RequestBody ${className} obj) {
+    public boolean add(@RequestBody ${className} obj) {
         return service.add${className}(obj);
     }
 
     @RequestMapping(value = "edit",name="编辑", method = {RequestMethod.POST})
-    protected boolean edit(@RequestBody ${className} obj) {
+    public boolean edit(@RequestBody ${className} obj) {
 
         return service.edit${className}(obj);
     }
     @RequestMapping(value = "list",name="查询列表", method = {RequestMethod.POST})
-    protected PageInfo<${className}> list(@RequestBody Map<String, String> obj) {
+    public PageInfo<${className}> list(@RequestBody Map<String, String> obj) {
 
         String field = obj.get("field");
         String order = obj.get("order");
@@ -52,7 +52,7 @@ public class Base${className}Controller{
     }
 
     @RequestMapping(value = "item",name="查看内容", method = {RequestMethod.POST})
-    protected ${className} item(@RequestBody ${className} obj) {
+    public ${className} item(@RequestBody ${className} obj) {
         return service.get${className}(obj);
     }
 

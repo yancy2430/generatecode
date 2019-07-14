@@ -7,7 +7,7 @@
     <packaging>maven-plugin</packaging>
     <groupId>com.tdeado</groupId>
     <artifactId>generate-code</artifactId>
-    <version>3.4</version>
+    <version>3.5</version>
 
     <dependencies>
         <dependency>

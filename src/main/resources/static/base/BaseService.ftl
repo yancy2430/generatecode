@@ -1,6 +1,6 @@
 package ${packageName}.service.base;
 
-import ${basePackageName}.entity.${name}.${className};
+import ${basePackageName}.${name}.entity.${className};
 import com.github.pagehelper.PageInfo;
 
 public interface Base${className}Service {

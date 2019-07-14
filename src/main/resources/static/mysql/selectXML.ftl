@@ -1,4 +1,4 @@
-    <resultMap type="${basePackageName}.entity.${name}.${className}" id="${className}Map">
+    <resultMap type="${basePackageName}.${name}.entity.${className}" id="${className}Map">
         <#list attrs as attr>
         <result property="${attr.propertiesName}" column="${attr.columnName}"/>
         </#list>
@@ -15,7 +15,7 @@
                 ${sense}${attr.columnName}${sense} = ${"#\{"}${attr.propertiesName}} and
             </if>
                 </#list>
-            <if test = "(_parameter instanceof ${basePackageName}.entity.${name}.${className}${r'$'}QueryBuilder) == true">
+            <if test = "(_parameter instanceof ${basePackageName}.${name}.entity.${className}${r'$'}QueryBuilder) == true">
                 <#list attrs as attr>
                 <if test="${attr.propertiesName}List != null">
                     ${sense}${attr.columnName}${sense} in
@@ -62,7 +62,7 @@
                 ${sense}${attr.columnName}${sense} = ${"#\{"}${attr.propertiesName}} and
             </if>
                 </#list>
-            <if test = "(_parameter instanceof ${basePackageName}.entity.${name}.${className}${r'$'}QueryBuilder) == true">
+            <if test = "(_parameter instanceof ${basePackageName}.${name}.entity.${className}${r'$'}QueryBuilder) == true">
                 <#list attrs as attr>
                     <if test="${attr.propertiesName}List != null">
                         ${sense}${attr.columnName}${sense} in
@@ -112,7 +112,7 @@
 
     <sql id="baseResult">
         <trim suffixOverrides=",">
-            <if test = "(_parameter instanceof ${basePackageName}.entity.${name}.${className}${r'$'}QueryBuilder) == true">
+            <if test = "(_parameter instanceof ${basePackageName}.${name}.entity.${className}${r'$'}QueryBuilder) == true">
 
                 <if test="fetchFields==null">
                     <include refid="allResult"></include>
@@ -145,7 +145,7 @@
                     </if>
                 </if>
             </if>
-            <if test="(_parameter instanceof ${basePackageName}.entity.${name}.${className}${r'$'}QueryBuilder) == false" >
+            <if test="(_parameter instanceof ${basePackageName}.${name}.entity.${className}${r'$'}QueryBuilder) == false" >
                 <include refid="allResult"></include>
             </if>
 
