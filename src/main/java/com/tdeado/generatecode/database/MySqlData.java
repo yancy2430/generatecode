@@ -1,10 +1,7 @@
 package com.tdeado.generatecode.database;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * db.mysql
@@ -41,14 +38,14 @@ public class MySqlData {
      */
     private String javaTypeName;
     /**
-     * 注解
+     * 注释
      */
     private String remarks;
 
     /**
      * 说明
      */
-    private String explain="阿萨德";
+    private String explain="";
 
     /**
      * 是否可以为NULL
@@ -67,11 +64,6 @@ public class MySqlData {
 
     private List<KV> kvs;
 
-    private boolean hidden;
-    private boolean find = false;
-    private boolean like = false;
-    private boolean auto = false;
-    private boolean multiple = false;
 
     public String getExplain() {
         return explain;
@@ -81,66 +73,7 @@ public class MySqlData {
         this.explain = explain;
     }
 
-    public String parsing(String str) {
 
-        if (!str.contains("find")) {
-            return "0";
-        }
-
-        String[] split = str.split("\\|");
-        String strs = split[0]+"-";
-        for (String s : split) {
-            if (s.contains(":")) {
-                String[] arr = s.split(":");
-                if (arr[1].contains(",") && arr[1].contains(".")) {
-                    strs += "数据类型为：" + arr[0];
-                    List<Map> list = new ArrayList<>();
-                    for (String s1 : arr[1].split(",")) {
-                        String[] kv = s1.split("\\.");
-                        Map<String, String> stringMap = new HashMap<>();
-                        stringMap.put("t", kv[0]);
-                        stringMap.put("v", kv[1]);
-                        strs += " 可选值：" + kv[0] + "为" + kv[1] + ",";
-                        list.add(stringMap);
-                    }
-                } else {
-                    switch (arr[0]) {
-                        case "data":
-                            strs += "数据类型为：" + arr[1] + ",";
-                            break;
-                        case "find":
-                            strs += "支持查询条件：" + arr[1] + ",";
-                            break;
-                        case "sort":
-                            strs += "支持排序：" + arr[1] + ",";
-                        case "table":
-                            strs += "关联表：" + arr[1] + ",";
-                            break;
-                    }
-
-                }
-            }
-
-        }
-        return strs.substring(0,strs.length()-1);
-
-    }
-
-    public boolean isFind() {
-        return find;
-    }
-
-    public void setFind(boolean find) {
-        this.find = find;
-    }
-
-    public boolean getHidden() {
-        return hidden;
-    }
-
-    public void setHidden(boolean hidden) {
-        this.hidden = hidden;
-    }
 
     public String getIsBetween() {
         return isBetween;
@@ -179,22 +112,9 @@ public class MySqlData {
         return this.remarks;
     }
 
-    public boolean isHidden() {
-        return hidden;
-    }
-
-    public boolean isLike() {
-        return like;
-    }
-
-    public void setLike(boolean like) {
-        this.like = like;
-    }
 
     public void setRemarks(String remarks) {
-
         this.remarks = remarks;
-        this.explain = parsing(remarks);
     }
 
     public String getColumnName() {
@@ -277,11 +197,6 @@ public class MySqlData {
                 ", showType='" + showType + '\'' +
                 ", explain='" + explain + '\'' +
                 ", kvs=" + kvs +
-                ", hidden=" + hidden +
-                ", find=" + find +
-                ", like=" + like +
-                ", auto=" + auto +
-                ", multiple=" + multiple +
                 '}';
     }
 }

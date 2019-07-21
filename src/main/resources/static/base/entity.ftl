@@ -19,11 +19,7 @@ public class ${className} implements Serializable{
 
     <#if attr.remarks!="" || attr.nullAble?? ||attr.columnDef??>
     /**
-        <#if attr.isKey == 1>
-    * 主键
-        </#if>
-    * ${attr.remarks}
-    * isNullAble:${attr.nullAble}<#if attr.columnDef??>,defaultVal:${attr.columnDef}</#if>
+    * <#if attr.remarks!="">${attr.remarks}|</#if><#if attr.columnDef?? && attr.columnDef!="">default:${attr.columnDef}|</#if><#if attr.nullAble == 0>required</#if>
     */
     </#if>
     <#if attr.javaTypeName == "java.time.LocalDateTime">

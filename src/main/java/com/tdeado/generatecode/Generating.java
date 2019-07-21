@@ -60,6 +60,7 @@ public class Generating {
         object.put("packageName", packageName + "." + name);
         object.put("basePackageName", packageName);
         object.put("attrs", operate.getTableData(tableName).getColumns());
+        System.err.println(GsonUtil.beanTojson(operate.getTableData(tableName).getColumns()));
         object.put("tableAttrs", operate.getTableData(tableName));
         object.put("tableName", tableName);
         object.put("timeStamp", String.valueOf(System.currentTimeMillis()));
@@ -88,7 +89,7 @@ public class Generating {
         //BaseController
         configuration.setClassForTemplateLoading(Generating.class, "/static");
         template = configuration.getTemplate("base/BaseController.ftl");
-        createNewFileNameExist("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/web/" + object.get("className").toString() + "Controller.java",out,object,template);
+        createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/web/" + object.get("className").toString() + "Controller.java",out,object,template);
 
         //生成entity
         template = configuration.getTemplate("base/entity.ftl");
@@ -97,9 +98,9 @@ public class Generating {
 
 
         //生成entity
-        template = configuration.getTemplate("base/BaseRemoteService.ftl");
+//        template = configuration.getTemplate("base/BaseRemoteService.ftl");
         //设置输出文件
-        createNewFileNameExist("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/remote/base/" + object.get("className").toString() + "RemoteFeginService.java",out,object,template);
+//        createNewFileNameExist("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/remote/base/" + object.get("className").toString() + "RemoteFeginService.java",out,object,template);
 
 
         //BaseMapper
@@ -114,9 +115,9 @@ public class Generating {
 
 
         //生成doc
-        template = configuration.getTemplate("doc/md.ftl");
+//        template = configuration.getTemplate("doc/md.ftl");
         //设置输出文件
-        createNewFileName("src/main/resources/doc/" + object.get("className").toString() + ".md",out,object,template);
+//        createNewFileName("src/main/resources/doc/" + object.get("className").toString() + ".md",out,object,template);
 
         //生成Service
         template = configuration.getTemplate("Service.ftl");
