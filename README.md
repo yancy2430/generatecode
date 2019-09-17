@@ -36,3 +36,15 @@
         </plugins>
 </build>
 ```
+
+添加依赖的库
+
+```xml
+
+<dependency>
+        <groupId>com.github.pagehelper</groupId>
+        <artifactId>pagehelper-spring-boot-starter</artifactId>
+        <version>1.2.10</version>
+</dependency>
+
+```
