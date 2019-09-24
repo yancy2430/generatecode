@@ -87,9 +87,9 @@ public class Generating {
         createNewFileNameExist("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/service/base/impl/Base" + object.get("className").toString() + "ServiceImpl.java",out,object,template);
 
         //BaseController
-        configuration.setClassForTemplateLoading(Generating.class, "/static");
-        template = configuration.getTemplate("base/BaseController.ftl");
-        createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/web/" + object.get("className").toString() + "Controller.java",out,object,template);
+//        configuration.setClassForTemplateLoading(Generating.class, "/static");
+//        template = configuration.getTemplate("base/BaseController.ftl");
+//        createNewFileName("src/main/java" + "/" + packageName.replace(".", "/") + "/" + name + "/web/" + object.get("className").toString() + "Controller.java",out,object,template);
 
         //生成entity
         template = configuration.getTemplate("base/entity.ftl");
