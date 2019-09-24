@@ -1,5 +1,8 @@
 package com.tdeado.generatecode;
 
+import com.google.gson.Gson;
+import freemarker.template.Configuration;
+import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import lombok.Data;
 import org.apache.maven.plugin.AbstractMojo;
@@ -7,9 +10,12 @@ import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 生成DAO代码
@@ -71,28 +77,21 @@ public class MdMojo extends AbstractMojo {
 
     public static void main(String[] args) throws IOException, TemplateException {
         treeList("/Users/yangzhe/新框架/common/src/main/", 0);
-        for (String string : strings) {
-            System.err.println(string);
-        }
-
-        //        File fileTemplate = new File("classpath:/static");//模板路径
-//        Map<String, Object> root = new HashMap<String, Object>();
-//        Gson gson = new Gson();
-//        System.err.println(gson.toJson(treeList("/Users/yangzhe/新框架/common/src/main/")));
-//        List<DirBean> list = treeList("/Users/yangzhe/新框架/common/src/main/");
-//        root.put("list", list);
-//        // 通过FreeMarker的Confuguration读取相应的模板文件
-//        Configuration configuration = new Configuration(Configuration.VERSION_2_3_23);
-//        // 设置默认字体
-//        configuration.setDefaultEncoding("utf-8");
-//        configuration.setClassForTemplateLoading(Generating.class, "/static");
-//        //生成bootstrap
-//        Template template = configuration.getTemplate("directoryTree.ftl");
-//        File file = new File("/Users/yangzhe/新框架/common/dirdoc.md");
-//        file.createNewFile();
-//        FileWriter out = new FileWriter(file);
-//        //模板输出静态文件
-//        template.process(root, out);
+        Map<String, Object> root = new HashMap<String, Object>();
+        Gson gson = new Gson();
+        root.put("list", strings);
+        // 通过FreeMarker的Confuguration读取相应的模板文件
+        Configuration configuration = new Configuration(Configuration.VERSION_2_3_23);
+        // 设置默认字体
+        configuration.setDefaultEncoding("utf-8");
+        configuration.setClassForTemplateLoading(Generating.class, "/static");
+        //生成bootstrap
+        Template template = configuration.getTemplate("directoryTree.ftl");
+        File file = new File("/Users/yangzhe/新框架/common/dirdoc.md");
+        file.createNewFile();
+        FileWriter out = new FileWriter(file);
+        //模板输出静态文件
+        template.process(root, out);
     }
 
     @Data
