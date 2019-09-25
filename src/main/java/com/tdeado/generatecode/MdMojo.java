@@ -42,6 +42,34 @@ public class MdMojo extends AbstractMojo {
 
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException {
+        treeList(basedir+"/src/main",0);
+
+        Map<String, Object> root = new HashMap<String, Object>();
+        Gson gson = new Gson();
+        root.put("list", strings);
+        // 通过FreeMarker的Confuguration读取相应的模板文件
+        Configuration configuration = new Configuration(Configuration.VERSION_2_3_23);
+        // 设置默认字体
+        configuration.setDefaultEncoding("utf-8");
+        configuration.setClassForTemplateLoading(Generating.class, "/static");
+        //生成bootstrap
+        Template template = null;
+        try {
+            template = configuration.getTemplate("directoryTree.ftl");
+            File file = new File(basedir+"/doc/filedoc.md");
+            if (!file.getParentFile().exists()) {
+                file.getParentFile().mkdirs();
+            }
+            file.createNewFile();
+            FileWriter out = new FileWriter(file);
+            //模板输出静态文件
+            template.process(root, out);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (TemplateException e) {
+            e.printStackTrace();
+        }
+
     }
 
     static List<String> strings = new ArrayList<>();
@@ -75,24 +103,6 @@ public class MdMojo extends AbstractMojo {
         }
     }
 
-    public static void main(String[] args) throws IOException, TemplateException {
-        treeList("/Users/yangzhe/新框架/common/src/main/", 0);
-        Map<String, Object> root = new HashMap<String, Object>();
-        Gson gson = new Gson();
-        root.put("list", strings);
-        // 通过FreeMarker的Confuguration读取相应的模板文件
-        Configuration configuration = new Configuration(Configuration.VERSION_2_3_23);
-        // 设置默认字体
-        configuration.setDefaultEncoding("utf-8");
-        configuration.setClassForTemplateLoading(Generating.class, "/static");
-        //生成bootstrap
-        Template template = configuration.getTemplate("directoryTree.ftl");
-        File file = new File("/Users/yangzhe/新框架/common/dirdoc.md");
-        file.createNewFile();
-        FileWriter out = new FileWriter(file);
-        //模板输出静态文件
-        template.process(root, out);
-    }
 
     @Data
     public static class DirBean {
